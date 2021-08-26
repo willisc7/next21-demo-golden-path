@@ -99,6 +99,10 @@
 0. See the app running at http://localhost:8080
 0. Open **main.go** and change the value of `var color` to blue/red and watch the app rebuild in the console output
 0. See the change running at http://localhost:8080
+0. You can debug the app by doing the following:
+    * Click the Cloud Code stop button at the top of the IDE
+    * Open **main.go** and add a breakpoint on the line `counter, err := incrCounter(c)`
+    * On the bar at the absolute bottom of the IDE, click Cloud Code > Debug on Kubernetes
 
 Your app is now deployed locally on minikube with redis.
 
