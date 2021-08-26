@@ -95,6 +95,8 @@
     deploy:
     ...
     ```
+0. Edit **skaffold.yaml** and change the `apiVersion` to `skaffold/v2beta16`
+    * Note: this step shouldnt be necessary once Cloud Deploy exits beta
 0. On the bar at the absolute bottom of the IDE, click Cloud Code > Run on Kubernetes and watch the app build and deploy to minikube in the console output
 0. See the app running at http://localhost:8080
 0. Open **main.go** and change the value of `var color` to blue/red and watch the app rebuild in the console output
