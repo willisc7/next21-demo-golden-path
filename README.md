@@ -221,6 +221,7 @@ You now have Cloud Build configured for continuous integration.
     ```
 0. Still editing **deployment-staging.yaml**, add the following YAML to the end of the file to deploy a redis in GCP using GCP Config Connector
     ```
+    ---
     apiVersion: redis.cnrm.cloud.google.com/v1beta1
     kind: RedisInstance
     metadata:
