@@ -155,7 +155,7 @@ Your app is now deployed locally on minikube with redis.
     gcloud beta builds triggers create github \
         --name="sample-app-repo" \
         --repo-owner="willisc7" \
-        --repo-name="sample-app" \
+        --repo-name="next21-demo-golden-path" \
         --branch-pattern="main" \
         --build-config="cloudbuild.yaml"
     ```
