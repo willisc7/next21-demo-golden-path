@@ -89,7 +89,7 @@
     build:
     ...
     test:
-    - image: sample-app
+    - image: go-mod-image
       custom:
       - command: go test
     deploy:
