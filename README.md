@@ -336,6 +336,7 @@ You now have Cloud Build pushing artifacts to Artifact Registry and triggering a
       connectMode: PRIVATE_SERVICE_ACCESS
     ```
 0. Push the changes so Cloud Deploy can use these files
+    ```
     git add . && git commit -am "Trigger build" && git push
     ```
 0. Create a file called **redis.yaml** and paste the following YAML into it
