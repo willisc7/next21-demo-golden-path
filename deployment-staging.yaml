@@ -31,6 +31,9 @@ spec:
       containers:
       - name: go-mod-image
         image: go-mod-image
+        env:
+        - name: VERSION
+          value: staging
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
