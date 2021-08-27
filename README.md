@@ -84,6 +84,25 @@
       name: info-getter # this must match the name of the Role or ClusterRole you wish to bind to
       apiGroup: rbac.authorization.k8s.io
     ```
+0. The app will need an environment variable called `VERSION` in order to correctly find redis. Edit **deployment.yaml** and ensure the appropriate section matches the below YAML
+    ```
+    spec:
+      replicas: 1
+      selector:
+        matchLabels:
+          app: go-mod-image
+      template:
+        metadata:
+          labels:
+            app: go-mod-image
+        spec:
+          containers:
+          - name: go-mod-image
+            image: go-mod-image
+            env:
+            - name: VERSION
+              value: staging
+    ```
 0. Edit **skaffold.yaml** and add testing between the build and deploy YAML so the file looks like this
     ```
     build:
