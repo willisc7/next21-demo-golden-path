@@ -9,4 +9,3 @@ gkeCluster:
   project: next21-golden-path
   cluster: prod
   location: us-central1
-
