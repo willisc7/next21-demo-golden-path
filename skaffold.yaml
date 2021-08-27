@@ -1,7 +1,7 @@
 apiVersion: skaffold/v2beta16
 kind: Config
 metadata:
-  name: next--demo-golden-path
+  name: next21-demo-golden-path
 build:
   artifacts:
   - image: go-mod-image
