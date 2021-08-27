@@ -59,3 +59,16 @@ roleRef:
   kind: Role #this must be Role or ClusterRole
   name: info-getter # this must match the name of the Role or ClusterRole you wish to bind to
   apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: redis.cnrm.cloud.google.com/v1beta1
+kind: RedisInstance
+metadata:
+  name: redis-prod
+spec:
+  displayName: Redis Instance
+  region: us-central1
+  authorizedNetworkRef:
+    name: default
+  tier: BASIC
+  memorySizeGb: 16
+  connectMode: PRIVATE_SERVICE_ACCESS

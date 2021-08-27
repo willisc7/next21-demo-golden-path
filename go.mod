@@ -1,4 +1,4 @@
-module github.com/willisc7/sample-app
+module github.com/willisc7/next21-demo-golden-path
 
 go 1.16
 
