@@ -339,7 +339,7 @@ You now have Cloud Build pushing artifacts to Artifact Registry and triggering a
     cp deployment-staging.yaml deployment-canary.yaml
     cp deployment-staging.yaml deployment-prod.yaml
     ```
-0. Edit **deployment-canary.yaml** and **deployment-prod.yaml** and remove the redis YAML shown below. The canary deployment will use the prod version of redis and we will be spinning up the prod version of redis separately in a moment.
+0. Edit **deployment-canary.yaml** and **deployment-prod.yaml** and remove the redis YAML shown below. The canary deployment will use the prod version of redis and we will be spinning up the prod version of redis separately in a moment. **IMPORTANT:** also make sure you change the value of `VERSION` to `canary` or `prod` as appropriate.
     ```
     apiVersion: redis.cnrm.cloud.google.com/v1beta1
     kind: RedisInstance
