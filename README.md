@@ -227,7 +227,7 @@ You now have Cloud Build configured for continuous integration.
     apiVersion: redis.cnrm.cloud.google.com/v1beta1
     kind: RedisInstance
     metadata:
-      name: redis
+      name: redis-staging
     spec:
       displayName: Redis Instance
       region: us-central1
@@ -325,7 +325,7 @@ You now have Cloud Build pushing artifacts to Artifact Registry and triggering a
     apiVersion: redis.cnrm.cloud.google.com/v1beta1
     kind: RedisInstance
     metadata:
-      name: redis
+      name: redis-staging
     spec:
       displayName: Redis Instance
       region: us-central1
@@ -344,7 +344,7 @@ You now have Cloud Build pushing artifacts to Artifact Registry and triggering a
     apiVersion: redis.cnrm.cloud.google.com/v1beta1
     kind: RedisInstance
     metadata:
-      name: redis
+      name: redis-prod
     spec:
       displayName: Redis Instance
       region: us-central1
