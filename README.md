@@ -469,6 +469,7 @@ You now have Cloud Deploy creating canary releases on prod that can be approved 
     kubectl delete redisinstances redis-prod --context gke_$(gcloud config get-value project)_us-central1_prod
     kubectl delete redisinstances redis-staging --context gke_$(gcloud config get-value project)_us-central1_staging
     ```
+0. Delete the redis instances [here](https://console.cloud.google.com/memorystore/redis/instances)
 0. Remove all the files we created and push the changes
     ```
     rm *.yaml
