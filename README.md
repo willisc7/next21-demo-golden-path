@@ -457,9 +457,12 @@ You now have Cloud Deploy creating canary releases on prod that can be approved 
 ![Step 4](./images/4.png)
 
 ## Optional: Reset to Beginning
-0. `gcloud alpha deploy delete --file ./pipeline.yaml --region us-central1 --force`
+0. Delete the Cloud Deploy pipeline
+    ```
+    gcloud alpha deploy delete --file ./pipeline.yaml --region us-central1 --force
+    ```
 0. Delete the Cloud Build trigger [here](https://console.cloud.google.com/cloud-build/triggers)
-0. Delete deployments on minikube, staging, and prod clusters
+0. Either delete the prod and staging clusters or do the following on the prod, staging, and minikube clusters if you want to keep them running
     ```
     kubectl delete deploy go-mod-image --context gke_$(gcloud config get-value project)_us-central1_prod
     kubectl delete deploy go-mod-image --context gke_$(gcloud config get-value project)_us-central1_staging
