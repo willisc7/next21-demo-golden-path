@@ -21,7 +21,7 @@ steps:
   - -xe
   - -c
   - |
-    gcloud alpha deploy releases create f61ff70-1630517751 \
+    gcloud alpha deploy releases create $SHORT_SHA-$(date +%s) \
                         --delivery-pipeline sample-app \
                         --description "$(git log -1  --pretty='%s')" \
                         --region ${_REGION} \
