@@ -1,0 +1,37 @@
+apiVersion: skaffold/v2beta16
+kind: Config
+metadata:
+  name: next--demo-golden-path
+build:
+  artifacts:
+  - image: go-mod-image
+    buildpacks:
+      builder: gcr.io/buildpacks/builder:v1
+test:
+- image: go-mod-image
+  custom:
+  - command: go test
+deploy:
+  kubectl:
+    manifests:
+    - deployment.yaml
+portForward:
+- resourceType: service
+  resourceName: go-mod-image
+  port: 8080
+profiles:
+- name: staging
+  deploy:
+    kubectl:
+      manifests:
+      - deployment-staging.yaml
+- name: canary
+  deploy:
+    kubectl:
+      manifests:
+      - deployment-canary.yaml
+- name: prod
+  deploy:
+    kubectl:
+      manifests:
+      - deployment-prod.yaml
