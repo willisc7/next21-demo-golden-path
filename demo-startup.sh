@@ -8,7 +8,8 @@ gcloud services enable sourcerepo.googleapis.com \
     container.googleapis.com \
     redis.googleapis.com \
     cloudresourcemanager.googleapis.com \
-    servicenetworking.googleapis.com
+    servicenetworking.googleapis.com \
+    artifactregistry.googleapis.com
 
 # Give the Cloud Build service account permission to modify Cloud Deploy 
 # resources and create releases to deploy on GKE. These permissions are 
